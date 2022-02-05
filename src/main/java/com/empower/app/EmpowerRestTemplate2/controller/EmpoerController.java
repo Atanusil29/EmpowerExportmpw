@@ -95,7 +95,7 @@ public class EmpoerController {
 			exportHeader.add("Cookie", "JSESSIONID="+jsessionId);
 			exportHeader.add("X-CSRF-TOKEN", csrfToken);
 			exportHeader.setContentDispositionFormData("Content-Disposition", "attachment; filename=CustomerLetter.mpw");
-			MultiValueMap<String, String> exportMap = new LinkedMultiValueMap<String, String>();
+			MultiValueMap<String, String> exportMap = new LinkedMultiValueMap<String, String>(); 
 			exportMap.set("preserveDoc", "true");
 			HttpEntity<MultiValueMap<String, String>> exportDocRequest = new HttpEntity<MultiValueMap<String, String>>(exportMap, exportHeader);
 			//HttpEntity<String> entity = new HttpEntity<String>("requestJson", headers);
