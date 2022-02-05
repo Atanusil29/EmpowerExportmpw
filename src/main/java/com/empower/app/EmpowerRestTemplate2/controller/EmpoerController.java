@@ -102,7 +102,7 @@ public class EmpoerController {
 			//ResponseEntity<String> exportDocumentresponse = restTemplate.exchange(exportURL, HttpMethod.POST, exportDocRequest, String.class);
 			ResponseEntity<byte[]> exportDocumentresponse = restTemplate.exchange(exportURL, HttpMethod.POST, exportDocRequest, byte[].class);
 			try {
-				Files.write(Paths.get("C:\\MySpace\\Empower\\"+ documentId.get(i) +".mpw"), exportDocumentresponse.getBody(),StandardOpenOption.CREATE);
+				Files.write(Paths.get("C:\\Workspace\\EmpowerTestDownload\\"+ documentId.get(i) +".mpw"), exportDocumentresponse.getBody(),StandardOpenOption.CREATE);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
